@@ -1,8 +1,8 @@
 import React from 'react';
 import { PostContent } from '../lib/posts';
-import PostItem from './originals/PostItem';
-import TagLink from './originals/TagLink';
-import Pagination from './originals/Pagination';
+import PostItem from '../../dustbin/originals/PostItem';
+import TagLink from '../../dustbin/originals/TagLink';
+import Pagination from '../../dustbin/originals/Pagination';
 import { TagContent } from '../lib/tags';
 
 type Props = {

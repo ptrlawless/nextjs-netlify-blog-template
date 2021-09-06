@@ -3,7 +3,7 @@ import Layout from '../../../components/Layout';
 import BasicMeta from '../../../components/meta/BasicMeta';
 import OpenGraphMeta from '../../../components/meta/OpenGraphMeta';
 import TwitterCardMeta from '../../../components/meta/TwitterCardMeta';
-import TagPostList from '../../../components/originals/TagPostList';
+import TagPostList from '../../../../dustbin/originals/TagPostList';
 import config from '../../../lib/config';
 import { countPosts, listPostContent, PostContent } from '../../../lib/posts';
 import { getTag, listTags, TagContent } from '../../../lib/tags';

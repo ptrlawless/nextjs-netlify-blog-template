@@ -20,7 +20,7 @@ type Props = {
   };
 };
 
-export default function ({ posts, tags, pagination }: Props) {
+export default function Home({ posts, tags, pagination }: Props) {
   const heroPost = posts[0];
   const morePosts = posts.slice(1);
   // const url = "/posts";

@@ -7,7 +7,7 @@ import { fetchPostContent } from '../../lib/posts';
 import fs from 'fs';
 import yaml from 'js-yaml';
 import { parseISO } from 'date-fns';
-import PostLayout from '../../components/originals/PostLayout';
+import PostLayout from '../../../dustbin/originals/PostLayout';
 
 import InstagramEmbed from 'react-instagram-embed';
 import YouTube from 'react-youtube';
