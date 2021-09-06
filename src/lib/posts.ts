@@ -12,6 +12,9 @@ export type PostContent = {
   readonly tags?: string[];
   readonly fullPath: string;
   readonly coverImage: string;
+  readonly author: string;
+  readonly excerpt: string;
+  readonly authorImage: string;
 };
 
 let postCache: PostContent[];
@@ -42,6 +45,9 @@ export function fetchPostContent(): PostContent[] {
         slug: string;
         fullPath: string;
         coverImage: string;
+        author: string;
+        excerpt: string;
+        authorImage: string;
       };
       matterData.fullPath = fullPath;
 

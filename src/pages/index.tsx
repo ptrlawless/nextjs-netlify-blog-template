@@ -38,9 +38,10 @@ export default function Home({ posts, tags, pagination }: Props) {
             title={heroPost.title}
             coverImage={heroPost.coverImage}
             date={heroPost.date}
-            // author={heroPost.author}
+            author={heroPost.author}
             slug={heroPost.slug}
-            // excerpt={heroPost.excerpt}
+            excerpt={heroPost.excerpt}
+            authorImage={heroPost.authorImage}
           />
         )}
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
