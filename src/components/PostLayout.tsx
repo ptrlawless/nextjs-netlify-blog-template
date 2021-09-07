@@ -31,16 +31,19 @@ export default function PostLayout({
   description = '',
   children,
 }: Props) {
-  const keywords = tags.map((it) => getTag(it));
+  console.log(tags);
+  const keywords = tags.map((it) => getTag(it).name);
   console.log(keywords);
+  const authorName = getAuthor(author).name;
+  console.log(getAuthor(author));
   return (
     <Layout>
-      {/* <BasicMeta
+      <BasicMeta
         url={`/posts/${slug}`}
         title={title}
         keywords={keywords}
         description={description}
-      /> */}
+      />
       {/* <TwitterCardMeta
         url={`/posts/${slug}`}
         title={title}
@@ -51,14 +54,14 @@ export default function PostLayout({
         title={title}
         description={description}
       />
-      {/* <JsonLdMeta
+      <JsonLdMeta
         url={`/posts/${slug}`}
         title={title}
         keywords={keywords}
         date={date}
         author={authorName}
         description={description}
-      /> */}
+      />
       <div className={'container'}>
         <article>
           <header>
@@ -69,20 +72,15 @@ export default function PostLayout({
               </div>
               <div>
                 <Author author={getAuthor(author)} />
-                {/* 
-                - author string enters postLayout from props 
-                - author string passed into getAuthor(slug)
-                - getAuthor() takes in author string and plugs it in as slug argument
-                -getAuthor() returns authorMap[slug] which is itself a slug string 
-                */}
-                <span className={'author'}>{author}</span>
               </div>
             </div>
           </header>
           <div className={styles.content}>{children}</div>
           <ul className={'tag-list'}>
             {tags.map((it, i) => (
-              <li key={i}>{/* <TagButton tag={getTag(it)} /> */}</li>
+              <li key={i}>
+                <TagButton tag={getTag(it)} />
+              </li>
             ))}
           </ul>
         </article>

@@ -6,7 +6,14 @@ type Props = {
 export default function Author({ author }: Props) {
   return (
     <>
-      <span>{author}</span>
+      <span>{author.name}</span>
+      <style jsx>
+        {`
+          span {
+            color: #9b9b9b;
+          }
+        `}
+      </style>
     </>
   );
 }
