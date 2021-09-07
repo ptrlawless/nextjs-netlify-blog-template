@@ -7,7 +7,7 @@ import { fetchPostContent } from '../../lib/posts';
 import fs from 'fs';
 import yaml from 'js-yaml';
 import { parseISO } from 'date-fns';
-import PostLayout from '../../../dustbin/originals/PostLayout';
+import PostLayout from '../../components/PostLayout';
 
 import InstagramEmbed from 'react-instagram-embed';
 import YouTube from 'react-youtube';
@@ -40,6 +40,7 @@ export default function Post({
   source,
 }: Props) {
   const content = hydrate(source, { components });
+  console.log(author);
   return (
     <PostLayout
       title={title}

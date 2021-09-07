@@ -1,13 +1,13 @@
 tags:
-  - slug: document
-    name: document
-  - slug: mock
-    name: mock
-  - slug: style
-    name: style
-  - slug: license
-    name: license
-  - slug: mdx
-    name: mdx
-  - slug: markdown
-    name: markdown
+  - slug: cases
+    name: cases
+  - slug: legislation
+    name: legislation
+  - slug: law
+    name: law
+  - slug: justice
+    name: justice
+  - slug: prison
+    name: prison
+  - slug: history
+    name: history

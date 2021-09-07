@@ -2,11 +2,11 @@
 
 export default function Intro() {
   return (
-    <section className="flex-col md:flex-row flex items-left md:items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <h1 className="text-7xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
+    <section className="flex-col md:flex-row flex items-left md:items-center md:justify-between mt-16 mb-16 md:mb-12 ">
+      <h1 className="text-7xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
         Regarding Justice
       </h1>
-      <h4 className="text-left md:text-left text-lg mt-8 md:pl-8">
+      <h4 className="text-left md:text-left text-lg mt-6 pr-8 md:pr-2 md:pl-8">
         Information and Opinions on Criminal Justice Reform
       </h4>
     </section>

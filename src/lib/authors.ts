@@ -1,4 +1,4 @@
-import authors from "../../meta/authors.yml";
+import authors from '../../meta/authors.yml';
 
 export type AuthorContent = {
   readonly slug: string;
@@ -13,6 +13,7 @@ function generateAuthorMap(): { [key: string]: AuthorContent } {
   for (const author of authors.authors) {
     result[author.slug] = author;
   }
+  console.log(result);
   return result;
 }
 
