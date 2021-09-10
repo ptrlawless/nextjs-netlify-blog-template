@@ -4,10 +4,10 @@ type Props = {
 };
 export default function Burger({ active, onClick }: Props) {
   return (
-    <div className={"container " + (active ? "active" : "")} onClick={onClick}>
-      <div className={"meat meat-1"} />
-      <div className={"meat meat-2"} />
-      <div className={"meat meat-3"} />
+    <div className={'container ' + (active ? 'active' : '')} onClick={onClick}>
+      <div className={'meat meat-1'} />
+      <div className={'meat meat-2'} />
+      <div className={'meat meat-3'} />
       <style jsx>
         {`
           .container {
@@ -18,7 +18,7 @@ export default function Burger({ active, onClick }: Props) {
             top: 1rem;
             left: 1.25rem;
             z-index: 2;
-            background-color: rgba(255, 255, 255, 0.7);
+            background-color: rgba(255, 255, 255, 0);
           }
           .meat {
             position: absolute;

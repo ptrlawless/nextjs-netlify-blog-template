@@ -10,7 +10,7 @@ import Head from 'next/head';
 import { CMS_NAME } from '../lib/constants';
 import HeroPost from '../components/HeroPost';
 import MoreStories from '../components/MoreStories';
-import Categories from '../components/Categories';
+import Headline from '../components/Headline';
 
 type Props = {
   posts: PostContent[];
@@ -23,9 +23,9 @@ type Props = {
 
 export default function Home({ posts, tags, pagination }: Props) {
   const heroPost = posts[0];
-  const morePosts = posts.slice(0, 4);
-  // const url = "/posts";
-  // const title = "All posts";
+  const morePosts = posts.slice(1);
+  const title = 'Blog Posts';
+  const subtitle = 'Thoughts and News on Criminal Justice Reform';
   return (
     <Layout>
       <Head>
@@ -34,9 +34,21 @@ export default function Home({ posts, tags, pagination }: Props) {
       </Head>
 
       <Container>
-        <Intro />
-
-        {morePosts.length > 0 && <Categories posts={morePosts} />}
+        <div>
+          <Headline title={title} subtitle={subtitle} />
+        </div>
+        {heroPost && (
+          <HeroPost
+            title={heroPost.title}
+            coverImage={heroPost.coverImage}
+            date={heroPost.date}
+            author={heroPost.author}
+            slug={heroPost.slug}
+            excerpt={heroPost.excerpt}
+            authorImage={heroPost.authorImage}
+          />
+        )}
+        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
       </Container>
     </Layout>
   );
@@ -57,31 +69,3 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   };
 };
-
-// export async function getStaticProps() {
-//   const allPosts = getAllPosts([
-//     'title',
-//     'date',
-//     'slug',
-//     'author',
-//     'coverImage',
-//     'excerpt',
-//   ]);
-
-//   return {
-//     props: { allPosts },
-//   };
-// }
-{
-  /* {heroPost && (
-          <HeroPost
-            title={heroPost.title}
-            coverImage={heroPost.coverImage}
-            date={heroPost.date}
-            author={heroPost.author}
-            slug={heroPost.slug}
-            excerpt={heroPost.excerpt}
-            authorImage={heroPost.authorImage}
-          />
-        )} */
-}

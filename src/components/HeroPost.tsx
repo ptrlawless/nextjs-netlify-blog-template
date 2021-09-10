@@ -13,7 +13,7 @@ export default function HeroPost({
   authorImage,
 }) {
   return (
-    <section>
+    <section className="mt-8">
       <div className="mb-8 md:mb-16">
         <CoverImage
           title={title}

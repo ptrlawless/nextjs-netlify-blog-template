@@ -1,8 +1,8 @@
 import PostPreview from './PostPreview';
 
-export default function MoreStories({ posts, postType }) {
+export default function MoreStories({ posts }) {
   return (
-    <section>
+    <section className="mt-16 px-4 md:px-0">
       {/* <h2 className="mb-8 text-6xl md:text-7xl font-bold text-gray-800 tracking-tighter leading-tight">
         More Stories
       </h2> */}

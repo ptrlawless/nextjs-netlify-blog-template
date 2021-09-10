@@ -13,7 +13,7 @@ export default function Navigation() {
         <ul>
           <li>
             <Link href="/">
-              <a className={router.pathname === '/' ? 'active' : null}>about</a>
+              <a className={router.pathname === '/' ? 'active' : null}>home</a>
             </Link>
           </li>
           <li>
@@ -27,16 +27,34 @@ export default function Navigation() {
               </a>
             </Link>
           </li>
+          <li>
+            <Link href="/">
+              <a className={router.pathname === '/' ? 'active' : null}>
+                articles
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/">
+              <a className={router.pathname === '/' ? 'active' : null}>
+                glossary
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/">
+              <a className={router.pathname === '/' ? 'active' : null}>about</a>
+            </Link>
+          </li>
         </ul>
         <style jsx>
           {`
             .container {
               width: 0;
-              border: 1px solid red;
             }
             ul {
               opacity: 0;
-              width: 30%;
+              width: 40%;
               height: 100vh;
               text-align: right;
               list-style: none;
@@ -51,16 +69,15 @@ export default function Navigation() {
               z-index: 1;
               transform: translateY(100%);
               transition: opacity 200ms;
-              border: 1px solid red;
             }
             .active ul {
               opacity: 1;
               transform: translateY(0);
             }
             li {
-              margin-bottom: 1.75rem;
+              margin-bottom: 2rem;
               font-size: 2rem;
-              padding: 0 1.5rem 0 0;
+              padding: 0 3rem 0 0;
             }
             li:last-child {
               margin-bottom: 0;
@@ -72,7 +89,7 @@ export default function Navigation() {
             @media (min-width: 769px) {
               .container {
                 width: 7rem;
-                display: block;
+                display: none;
               }
               ul {
                 opacity: 1;

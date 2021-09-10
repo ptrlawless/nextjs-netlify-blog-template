@@ -1,14 +1,33 @@
 // import { CMS_NAME } from '../lib/constants';
 
+import Author from './Author';
+import MoreStories from './MoreStories';
+
 export default function Intro() {
   return (
-    <section className="flex-col md:flex-row flex items-left md:items-center md:justify-between mt-16 mb-16 md:mb-12 ">
-      <h1 className="text-7xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
-        Regarding Justice
-      </h1>
-      <h4 className="text-left md:text-left text-lg mt-6 pr-8 md:pr-2 md:pl-8">
-        Information and Opinions on Criminal Justice Reform
-      </h4>
+    <section
+      style={{
+        // border: '1px solid red',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'right',
+        backgroundImage: `url(/images/hands-up-full.jpg)`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'top left 22%',
+        height: '100vh',
+        margin: '0 auto',
+        padding: '2rem',
+      }}
+    >
+      <div className="border-gray-800 w-3/6 border-solid h-100 flex flex-col justify-center items-end md:w-full h-full">
+        <h1 className="text-white text-right md:text-right text-5xl md:text-7xl lg:text-7xl font-bold tracking-tighter leading-tight w-full">
+          Regarding Justice
+        </h1>
+        <h4 className="text-right text-2xl md:text-right text-green-400 font-bold mt-6">
+          Information and Opinions on Criminal Justice Reform
+        </h4>
+      </div>
     </section>
   );
 }
