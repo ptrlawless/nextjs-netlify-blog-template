@@ -15,13 +15,13 @@ export default function Intro() {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'top left 22%',
-        height: '100vh',
+        height: '80vh',
         margin: '0 auto',
         padding: '2rem',
       }}
     >
-      <div className="border-gray-800 w-3/6 border-solid h-100 flex flex-col justify-center items-end md:w-full h-full">
-        <h1 className="text-white text-right md:text-right text-5xl md:text-7xl lg:text-7xl font-bold tracking-tighter leading-tight w-full">
+      <div className="border-gray-800 w-full border-solid h-100 flex flex-col justify-center items-end md:w-full">
+        <h1 className="text-white text-right md:text-right text-7xl md:text-8xl lg:text-8xl font-bold tracking-tighter leading-tight w-full">
           Regarding Justice
         </h1>
         <h4 className="text-right text-2xl md:text-right text-green-400 font-bold mt-6">

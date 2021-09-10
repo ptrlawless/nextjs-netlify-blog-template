@@ -13,8 +13,8 @@ export default function PostPreview({
   authorImage,
 }) {
   return (
-    <div>
-      <div className="mb-5">
+    <div className="bg-gray-300 p-8">
+      {/* <div className="mb-5 ">
         <CoverImage
           slug={slug}
           title={title}
@@ -22,17 +22,18 @@ export default function PostPreview({
           height={278}
           width={556}
         />
-      </div>
+      </div> */}
       <h3 className="text-gray-800 text-3xl mb-3 leading-snug">
-        <Link as={`/posts/${slug}`} href="/posts/[slug]">
+        {title}
+        {/* <Link as={`/posts/${slug}`} href="/posts/[slug]">
           <a className="hover:underline">{title}</a>
-        </Link>
+        </Link> */}
       </h3>
       <div className="text-gray-500 text-lg mb-4">
-        <DateFormatter dateString={date} />
+        {/* <DateFormatter dateString={date} /> */}
       </div>
       <p className="text-gray-500 text-lg leading-relaxed mb-4">{excerpt}</p>
-      <Avatar name={author} picture={authorImage} />
+      {/* <Avatar name={author} picture={authorImage} /> */}
     </div>
   );
 }

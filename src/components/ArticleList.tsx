@@ -1,13 +1,12 @@
 import React from 'react';
-import { PostContent } from '../lib/posts';
-import PostItem from './PostItem';
+import { ArticleContent } from '../lib/articles';
+import ArticleItem from './ArticleItem';
 import TagLink from './TagLink';
 import Pagination from './Pagination';
 import { TagContent } from '../lib/tags';
-import Intro from './Intro';
 
 type Props = {
-  posts: PostContent[];
+  posts: ArticleContent[];
   tags: TagContent[];
   pagination: {
     current: number;
@@ -20,7 +19,7 @@ export default function PostList({ posts, tags, pagination }: Props) {
       <div className={'container'}>
         <section className={'title'}>
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
-            Blog Posts
+            Articles and Features
           </h1>
         </section>
         <div className={'poststuff'}>
@@ -28,7 +27,7 @@ export default function PostList({ posts, tags, pagination }: Props) {
             <ul className={'post-list'}>
               {posts.map((it, i) => (
                 <li key={i}>
-                  <PostItem post={it} />
+                  <ArticleItem post={it} />
                 </li>
               ))}
             </ul>

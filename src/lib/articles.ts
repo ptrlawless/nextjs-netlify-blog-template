@@ -5,7 +5,7 @@ import yaml from 'js-yaml';
 
 const articlesDirectory = path.join(process.cwd(), 'content/articles');
 
-export type articleContent = {
+export type ArticleContent = {
   readonly date: string;
   readonly title: string;
   readonly slug: string;
@@ -17,9 +17,9 @@ export type articleContent = {
   readonly authorImage: string;
 };
 
-let articleCache: articleContent[];
+let articleCache: ArticleContent[];
 
-export function fetchArticleContent(): articleContent[] {
+export function fetchArticleContent(): ArticleContent[] {
   if (articleCache) {
     return articleCache;
   }
@@ -83,7 +83,7 @@ export function listArticleContent(
   page: number,
   limit: number,
   tag?: string
-): articleContent[] {
+): ArticleContent[] {
   return fetchArticleContent()
     .filter((it) => !tag || (it.tags && it.tags.includes(tag)))
     .slice((page - 1) * limit, page * limit);

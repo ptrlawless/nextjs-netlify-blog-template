@@ -3,7 +3,7 @@ import config from '../lib/config';
 import {
   countArticles,
   listArticleContent,
-  articleContent,
+  ArticleContent,
 } from '../lib/articles';
 import { listTags, TagContent } from '../lib/tags';
 import Layout from '../components/Layout';
@@ -14,7 +14,7 @@ import MoreStories from '../components/MoreStories';
 import HeroPost from '../components/HeroPost';
 
 type Props = {
-  posts: articleContent[];
+  posts: ArticleContent[];
   tags: TagContent[];
   pagination: {
     current: number;
@@ -27,7 +27,7 @@ export default function Home({ posts, tags, pagination }: Props) {
   const morePosts = posts.slice(1);
   const title = 'Articles';
   const subtitle = 'Articles and Features on Criminal Justice Reform';
-
+  const postType = 'article';
   return (
     <Layout>
       <Head>
@@ -47,7 +47,9 @@ export default function Home({ posts, tags, pagination }: Props) {
             authorImage={heroPost.authorImage}
           />
         )}
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+        {morePosts.length > 0 && (
+          <MoreStories posts={morePosts} postType={postType} />
+        )}
       </Container>
     </Layout>
   );

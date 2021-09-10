@@ -5,9 +5,7 @@ import { countPosts, listPostContent, PostContent } from '../lib/posts';
 import { listTags, TagContent } from '../lib/tags';
 import Layout from '../components/Layout';
 import Container from '../components/Container';
-import Intro from '../components/Intro';
 import Head from 'next/head';
-import { CMS_NAME } from '../lib/constants';
 import HeroPost from '../components/HeroPost';
 import MoreStories from '../components/MoreStories';
 import Headline from '../components/Headline';
@@ -26,6 +24,7 @@ export default function Home({ posts, tags, pagination }: Props) {
   const morePosts = posts.slice(1);
   const title = 'Blog Posts';
   const subtitle = 'Thoughts and News on Criminal Justice Reform';
+  const postType = 'blog';
   return (
     <Layout>
       <Head>
@@ -48,7 +47,9 @@ export default function Home({ posts, tags, pagination }: Props) {
             authorImage={heroPost.authorImage}
           />
         )}
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+        {morePosts.length > 0 && (
+          <MoreStories posts={morePosts} postType={postType} />
+        )}
       </Container>
     </Layout>
   );
