@@ -11,7 +11,35 @@ export default function HeroPost({
   author,
   slug,
   authorImage,
+  postType,
 }) {
+  function storyType() {
+    let slugInfo;
+    switch (postType) {
+      case 'blog':
+        console.log('blog');
+        return (slugInfo = {
+          slugType: `/posts/${slug}`,
+          hrefType: '/posts/[slug]',
+        });
+
+      case 'article':
+        console.log('article');
+        return (slugInfo = {
+          slugType: `/articles/${slug}`,
+          hrefType: '/articles/[slug]',
+        });
+
+      case 'keyword':
+        console.log('keyword');
+        return (slugInfo = {
+          slugType: `/keywords/${slug}`,
+          hrefType: '/keywords/[slug]',
+        });
+    }
+  }
+  const contentType = storyType();
+
   return (
     <section className="mt-8">
       <div className="mb-8 md:mb-16">
@@ -26,7 +54,7 @@ export default function HeroPost({
       <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
         <div>
           <h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
-            <Link as={`/posts/${slug}`} href="/posts/[slug]">
+            <Link as={contentType.slugType} href={contentType.hrefType}>
               <a className="hover:underline">{title}</a>
             </Link>
           </h3>

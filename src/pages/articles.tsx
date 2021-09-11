@@ -45,6 +45,7 @@ export default function Home({ posts, tags, pagination }: Props) {
             slug={heroPost.slug}
             excerpt={heroPost.excerpt}
             authorImage={heroPost.authorImage}
+            postType={postType}
           />
         )}
         {morePosts.length > 0 && (
