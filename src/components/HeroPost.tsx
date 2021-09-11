@@ -17,21 +17,18 @@ export default function HeroPost({
     let slugInfo;
     switch (postType) {
       case 'blog':
-        console.log('blog');
         return (slugInfo = {
           slugType: `/posts/${slug}`,
           hrefType: '/posts/[slug]',
         });
 
       case 'article':
-        console.log('article');
         return (slugInfo = {
           slugType: `/articles/${slug}`,
           hrefType: '/articles/[slug]',
         });
 
       case 'keyword':
-        console.log('keyword');
         return (slugInfo = {
           slugType: `/keywords/${slug}`,
           hrefType: '/keywords/[slug]',

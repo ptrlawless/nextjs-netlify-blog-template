@@ -6,7 +6,6 @@ export default function MoreStories({ posts, postType }) {
   function storyType() {
     switch (postType) {
       case 'blog':
-        console.log('blog');
         return posts.map((post) => (
           <PostPreview
             key={post.slug}
@@ -21,7 +20,6 @@ export default function MoreStories({ posts, postType }) {
         ));
 
       case 'article':
-        console.log('article');
         return posts.map((post) => (
           <ArticlePreview
             key={post.slug}
@@ -36,7 +34,6 @@ export default function MoreStories({ posts, postType }) {
         ));
 
       case 'keyword':
-        console.log('keyword');
         return posts.map((post) => (
           <KeywordPreview
             key={post.slug}

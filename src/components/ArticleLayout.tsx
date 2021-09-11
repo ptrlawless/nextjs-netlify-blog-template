@@ -31,11 +31,10 @@ export default function ArticleLayout({
   description = '',
   children,
 }: Props) {
-  console.log(tags);
   const keywords = tags.map((it) => getTag(it).name);
-  console.log(keywords);
+
   const authorName = getAuthor(author).name;
-  console.log(getAuthor(author));
+
   return (
     <Layout>
       <BasicMeta
@@ -263,10 +262,10 @@ export default function ArticleLayout({
 //   description = '',
 //   children,
 // }: Props) {
-//   console.log(author);
+//
 //   const keywords = tags.map((it) => getTag(it).name);
 //   const authorName = getAuthor(author);
-//   console.log(getAuthor(author));
+//
 
 //   return (
 //     <Layout>
