@@ -4,7 +4,6 @@ import { countPosts, listPostContent, PostContent } from '../lib/posts';
 import { listTags, TagContent } from '../lib/tags';
 import Layout from '../components/Layout';
 import Container from '../components/Container';
-import Hero from '../components/Hero';
 import Head from 'next/head';
 import Categories from '../components/Categories';
 
