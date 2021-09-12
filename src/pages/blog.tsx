@@ -1,5 +1,4 @@
 import { GetStaticProps } from 'next';
-import PostList from '../components/PostList';
 import config from '../lib/config';
 import { countPosts, listPostContent, PostContent } from '../lib/posts';
 import { listTags, TagContent } from '../lib/tags';

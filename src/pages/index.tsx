@@ -1,5 +1,4 @@
 import { GetStaticProps } from 'next';
-import PostList from '../components/PostList';
 import config from '../lib/config';
 import { countPosts, listPostContent, PostContent } from '../lib/posts';
 import { listTags, TagContent } from '../lib/tags';
@@ -8,7 +7,6 @@ import Container from '../components/Container';
 import Intro from '../components/Intro';
 import Head from 'next/head';
 import Categories from '../components/Categories';
-import Author from '../components/Author';
 
 type Props = {
   posts: PostContent[];
