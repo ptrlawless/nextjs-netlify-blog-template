@@ -2,7 +2,6 @@ import { GetStaticProps } from 'next';
 import Layout from '../../components/Layout';
 import BasicMeta from '../../components/meta/BasicMeta';
 import OpenGraphMeta from '../../components/meta/OpenGraphMeta';
-import TwitterCardMeta from '../../components/meta/TwitterCardMeta';
 import ArticleList from '../../components/ArticleList';
 import config from '../../lib/config';
 import {
@@ -29,7 +28,7 @@ export default function Index({ posts, tags, pagination }: Props) {
       <div style={{ border: '1px solid black' }}>
         <BasicMeta url={url} title={title} />
         <OpenGraphMeta url={url} title={title} />
-        {/* <TwitterCardMeta url={url} title={title} /> */}
+
         <ArticleList posts={posts} tags={tags} pagination={pagination} />
       </div>
     </Layout>
