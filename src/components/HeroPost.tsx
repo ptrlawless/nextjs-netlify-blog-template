@@ -1,6 +1,5 @@
 import Avatar from './Avatar';
 import DateFormatter from './DateFormatter';
-import CoverImage from './CoverImage';
 import Link from 'next/link';
 
 export default function HeroPost({
@@ -40,13 +39,13 @@ export default function HeroPost({
   return (
     <section className="mt-8">
       <div className="mb-8 md:mb-16">
-        <CoverImage
+        {/* <CoverImage
           title={title}
           src={coverImage}
           slug={slug}
           height={620}
           width={1240}
-        />
+        /> */}
       </div>
       <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
         <div>
