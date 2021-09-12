@@ -4,7 +4,7 @@ import { countPosts, listPostContent, PostContent } from '../lib/posts';
 import { listTags, TagContent } from '../lib/tags';
 import Layout from '../components/Layout';
 import Container from '../components/Container';
-import Intro from '../components/Intro';
+import Hero from '../components/Hero';
 import Head from 'next/head';
 import Categories from '../components/Categories';
 
@@ -30,13 +30,30 @@ export default function Home({ posts, tags, pagination }: Props) {
         style={{
           backgroundImage: `url(/images/hands-up-full.jpg)`,
           backgroundSize: 'cover',
+          width: '100vw',
+          height: '80vh',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'end',
+          paddingRight: '4rem',
         }}
       >
-        <Intro />
+        <h1 className="text-white text-right text-7xl md:text-right md:text-8xl lg:text-8xl font-bold tracking-tighter leading-tight w-full">
+          Regarding Justice
+        </h1>
+        <h4
+          className="text-right text-2xl md:text-right font-bold mt-6"
+          style={{ color: '#fff', mixBlendMode: 'hard-light' }}
+        >
+          Information and Opinions on Criminal Justice Reform
+        </h4>
+      </div>
+      <div style={{ backgroundColor: 'black', height: 'auto', width: '100%' }}>
+        {' '}
         <div
           style={{
             width: '100%',
-            height: 'auto',
             margin: '0 auto',
             backgroundColor: '#0003',
             padding: '4rem',
@@ -47,9 +64,6 @@ export default function Home({ posts, tags, pagination }: Props) {
           </Container>
         </div>
       </div>
-      <div
-        style={{ backgroundColor: 'black', height: '70vh', width: '100%' }}
-      ></div>
       <div
         style={{ backgroundColor: '#4c8878', height: '40vh', width: '100%' }}
       ></div>
