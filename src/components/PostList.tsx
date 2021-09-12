@@ -4,7 +4,6 @@ import PostItem from './PostItem';
 import TagLink from './TagLink';
 import Pagination from './Pagination';
 import { TagContent } from '../lib/tags';
-import Intro from './Intro';
 
 type Props = {
   posts: PostContent[];

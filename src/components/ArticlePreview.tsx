@@ -1,6 +1,6 @@
 import Avatar from './Avatar';
 import DateFormatter from './DateFormatter';
-import CoverImage from './CoverImage';
+// import CoverImage from './CoverImage';
 import Link from 'next/link';
 
 export default function PostPreview({
@@ -15,13 +15,13 @@ export default function PostPreview({
   return (
     <div>
       <div className="mb-5">
-        <CoverImage
+        {/* <CoverImage
           slug={slug}
           title={title}
           src={coverImage}
           height={278}
           width={556}
-        />
+        /> */}
       </div>
       <h3 className="text-gray-800 text-3xl mb-3 leading-snug">
         <Link as={`/articles/${slug}`} href="/articles/[slug]">
