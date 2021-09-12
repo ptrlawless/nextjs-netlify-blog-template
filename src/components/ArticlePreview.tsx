@@ -28,11 +28,12 @@ export default function PostPreview({
           <a className="hover:underline">{title}</a>
         </Link>
       </h3>
-      <div className="text-gray-500 text-lg mb-4">
+      <div className="flex text-gray-500 text-lg mb-4">
         <DateFormatter dateString={date} />
+        <p className="pl-4 ">{author}</p>
       </div>
       <p className="text-gray-500 text-lg leading-relaxed mb-4">{excerpt}</p>
-      <Avatar name={author} picture={authorImage} />
+      {/* <Avatar name={author} picture={authorImage} /> */}
     </div>
   );
 }

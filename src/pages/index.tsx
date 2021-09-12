@@ -7,10 +7,8 @@ import Layout from '../components/Layout';
 import Container from '../components/Container';
 import Intro from '../components/Intro';
 import Head from 'next/head';
-import { CMS_NAME } from '../lib/constants';
-import HeroPost from '../components/HeroPost';
-import MoreStories from '../components/MoreStories';
 import Categories from '../components/Categories';
+import Author from '../components/Author';
 
 type Props = {
   posts: PostContent[];
@@ -22,22 +20,41 @@ type Props = {
 };
 
 export default function Home({ posts, tags, pagination }: Props) {
-  const heroPost = posts[0];
   const morePosts = posts.slice(0, 4);
-  // const url = "/posts";
-  // const title = "All posts";
+
   return (
     <Layout>
       <Head>
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         <title>Regarding Justice</title>
       </Head>
-
-      <Container>
+      <div
+        style={{
+          backgroundImage: `url(/images/hands-up-full.jpg)`,
+          backgroundSize: 'cover',
+        }}
+      >
         <Intro />
-
-        {morePosts.length > 0 && <Categories posts={morePosts} />}
-      </Container>
+        <div
+          style={{
+            width: '100%',
+            height: 'auto',
+            margin: '0 auto',
+            backgroundColor: '#0003',
+            padding: '4rem',
+          }}
+        >
+          <Container>
+            {morePosts.length > 0 && <Categories posts={morePosts} />}
+          </Container>
+        </div>
+      </div>
+      <div
+        style={{ backgroundColor: 'black', height: '70vh', width: '100%' }}
+      ></div>
+      <div
+        style={{ backgroundColor: '#4c8878', height: '40vh', width: '100%' }}
+      ></div>
     </Layout>
   );
 }
@@ -57,31 +74,3 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   };
 };
-
-// export async function getStaticProps() {
-//   const allPosts = getAllPosts([
-//     'title',
-//     'date',
-//     'slug',
-//     'author',
-//     'coverImage',
-//     'excerpt',
-//   ]);
-
-//   return {
-//     props: { allPosts },
-//   };
-// }
-{
-  /* {heroPost && (
-          <HeroPost
-            title={heroPost.title}
-            coverImage={heroPost.coverImage}
-            date={heroPost.date}
-            author={heroPost.author}
-            slug={heroPost.slug}
-            excerpt={heroPost.excerpt}
-            authorImage={heroPost.authorImage}
-          />
-        )} */
-}
